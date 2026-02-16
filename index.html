@@ -18,7 +18,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff}
 /* ---------- HERO ---------- */
 .hero{
   height:100vh;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("imagestudio-1.jpg") center/cover;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("fitplace_girl_bg.jpg") center/cover;
   display:flex;align-items:center;padding:0 10%;color:#fff
 }
 .hero-title{font-size:48px;font-weight:700;line-height:1.15;margin-bottom:18px}
@@ -126,6 +126,8 @@ h2{margin:0 0 28px}
 
   <input class="field" id="name" placeholder="Ваше имя" />
   <br />
+  <input class="field" id="surname" placeholder="Ваша Фамилия" />
+  <br />
   <input class="field" id="phone" placeholder="Телефон" />
   <br />
 
@@ -163,8 +165,8 @@ h2{margin:0 0 28px}
       </p>
 
       <div class="about-photos">
-        <img src="imagestudio-1.jpg" alt="FITPLACE — зал" />
-        <img src="imagestudio-2.jpg" alt="FITPLACE — интерьер" />
+        <img src="imagesstudio-1.jpg" alt="FITPLACE — зал" />
+        <img src="imagesstudio-2.jpg" alt="FITPLACE — интерьер" />
       </div>
     </div>
   </div>
@@ -303,6 +305,7 @@ h2{margin:0 0 28px}
 <script>
 function send(){
   const name = document.getElementById("name").value.trim();
+  const surname = document.getElementById("surname").value.trim();
   const phone = document.getElementById("phone").value.trim();
   const goal  = document.getElementById("goal").value.trim();
   const limits = document.getElementById("limits").value.trim();
@@ -315,6 +318,7 @@ function send(){
   const text =
 `Здравствуйте!
 Имя: ${name}
+Фамилия: ${surname}
 Телефон: ${phone}
 Цель: ${goal}
 Ограничения по здоровью: ${limits ? limits : "нет"}
